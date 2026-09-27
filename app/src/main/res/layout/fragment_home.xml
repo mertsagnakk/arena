@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#12151F"
+    android:scrollbars="none"
+    android:clipToPadding="false"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ÜST PROFİL BARI -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    app:cardCornerRadius="19dp"
+                    app:cardBackgroundColor="#6C4FE0"
+                    app:strokeWidth="0dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:text="M" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mert" android:textColor="#E8E9EE" android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15. seviye" android:textColor="#4FD1A5" android:textSize="11sp" android:textStyle="bold" android:background="#123A33" android:paddingHorizontal="8dp" android:paddingVertical="1dp" android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:cardBackgroundColor="#1C2030"
+                app:cardCornerRadius="16dp"
+                app:strokeWidth="0dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="12dp" android:paddingVertical="6dp" android:text="🪙 2.450" android:textColor="#F0C85A" android:textSize="12sp" android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
+
+        <!-- 1V1 DÜELLO KARTI -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#1A1D29"
+            app:cardCornerRadius="12dp"
+            app:strokeWidth="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔴 1v1 düello modu" android:textColor="#E8635A" android:textStyle="bold" android:textSize="12sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="aktif 4.812 oyuncu" android:textColor="#7A7D8C" android:textSize="11sp" />
+                </RelativeLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnFindMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    app:cardBackgroundColor="#E8622F"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:text="⚔️ maça başla" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- BRANŞ SEÇİMİ (Carousel Yapısı) -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="branş seçimi" android:textColor="#C7C9D4" android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnPrevCategory" android:layout_width="30dp" android:layout_height="30dp" app:cardBackgroundColor="#1A1D29" app:cardCornerRadius="15dp" app:strokeWidth="0dp" android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:text="&lt;" android:textColor="#7A7D8C" android:textSize="16sp" android:textStyle="bold"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:layout_marginHorizontal="8dp" android:weightSum="10">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardCategoryHistory" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="3" android:layout_marginEnd="4dp" app:cardBackgroundColor="#1A1D29" app:cardCornerRadius="10dp" app:strokeWidth="0dp" android:alpha="0.55">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📘" android:textSize="18sp"/>
+                        <TextView android:id="@+id/tvCatHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="tarih" android:textColor="#9A9CAB" android:textSize="11sp" android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardCategoryGeo" android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="4" android:layout_marginHorizontal="4dp" app:cardBackgroundColor="#1E2A3A" app:cardCornerRadius="10dp" app:strokeColor="#4FC3F7" app:strokeWidth="2dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌍" android:textSize="20sp"/>
+                        <TextView android:id="@+id/tvCatGeo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="coğrafya" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold" android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardCategoryMixed" android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="3" android:layout_marginStart="4dp" app:cardBackgroundColor="#1A1D29" app:cardCornerRadius="10dp" app:strokeWidth="0dp" android:alpha="0.55">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚡" android:textSize="18sp"/>
+                        <TextView android:id="@+id/tvCatMixed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="karışık" android:textColor="#9A9CAB" android:textSize="11sp" android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnNextCategory" android:layout_width="30dp" android:layout_height="30dp" app:cardBackgroundColor="#1A1D29" app:cardCornerRadius="15dp" app:strokeWidth="0dp" android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:text="&gt;" android:textColor="#7A7D8C" android:textSize="16sp" android:textStyle="bold"/>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Paging Dots -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="16dp">
+            <View android:layout_width="5dp" android:layout_height="5dp" android:background="@drawable/bg_score_pill" android:backgroundTint="#3A3D4A" android:layout_marginHorizontal="2dp"/>
+            <View android:layout_width="5dp" android:layout_height="5dp" android:background="@drawable/bg_score_pill" android:backgroundTint="#4FC3F7" android:layout_marginHorizontal="2dp"/>
+            <View android:layout_width="5dp" android:layout_height="5dp" android:background="@drawable/bg_score_pill" android:backgroundTint="#3A3D4A" android:layout_marginHorizontal="2dp"/>
+        </LinearLayout>
+
+        <!-- ARKADAŞLARLA OYNA -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="arkadaşlarla oyna" android:textColor="#C7C9D4" android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" app:cardBackgroundColor="#1A1D29" app:cardCornerRadius="10dp" app:strokeColor="#2A2E3D" app:strokeWidth="1dp" android:clickable="true" android:focusable="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="➕" android:textColor="#4FC3F7" android:textSize="18sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="oda kur" android:textColor="#E8E9EE" android:textSize="12sp" android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="4dp" app:cardBackgroundColor="#1A1D29" app:cardCornerRadius="10dp" app:strokeColor="#2A2E3D" app:strokeWidth="1dp" android:clickable="true" android:focusable="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🚪" android:textColor="#4FC3F7" android:textSize="18sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="odaya katıl" android:textColor="#E8E9EE" android:textSize="12sp" android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- TEK BAŞINA PRATİK -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#1A1D29"
+            app:cardCornerRadius="12dp"
+            app:strokeWidth="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🧠 tek başına pratik" android:textColor="#E8E9EE" android:textStyle="bold" android:textSize="13sp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="istatistikler" android:textColor="#7A7D8C" android:textSize="11sp" />
+                </RelativeLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:background="@drawable/bg_score_pill" android:backgroundTint="#12151F" android:padding="6dp" android:layout_marginEnd="3dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="312" android:textColor="#E8E9EE" android:textSize="14sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="çözülen" android:textColor="#7A7D8C" android:textSize="10sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:background="@drawable/bg_score_pill" android:backgroundTint="#12151F" android:padding="6dp" android:layout_marginHorizontal="3dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="%74" android:textColor="#7BC47F" android:textSize="14sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="doğruluk" android:textColor="#7A7D8C" android:textSize="10sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:background="@drawable/bg_score_pill" android:backgroundTint="#12151F" android:padding="6dp" android:layout_marginStart="3dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="9 gün" android:textColor="#F0C85A" android:textSize="14sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="seri" android:textColor="#7A7D8C" android:textSize="10sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnSoloPractice"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="9dp"
+                    app:strokeColor="#A78BFA"
+                    app:strokeWidth="1dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:text="soru çözmeye başla" android:textColor="#A78BFA" android:textSize="12.5sp" android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
