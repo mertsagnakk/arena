@@ -139,6 +139,7 @@
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="arkadaşlarla oyna" android:textColor="#C7C9D4" android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp">
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCreateRoom"
                 android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp" app:cardBackgroundColor="#1A1D29" app:cardCornerRadius="10dp" app:strokeColor="#2A2E3D" app:strokeWidth="1dp" android:clickable="true" android:focusable="true">
                 <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="10dp">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="➕" android:textColor="#4FC3F7" android:textSize="18sp"/>
@@ -146,6 +147,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardJoinRoom"
                 android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="4dp" app:cardBackgroundColor="#1A1D29" app:cardCornerRadius="10dp" app:strokeColor="#2A2E3D" app:strokeWidth="1dp" android:clickable="true" android:focusable="true">
                 <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="10dp">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🚪" android:textColor="#4FC3F7" android:textSize="18sp"/>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dialog_rounded"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="odaya katıl"
+        android:textColor="#C7C9D4"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="arkadaşının paylaştığı 4 haneli kodu gir"
+        android:textColor="#7A7D8C"
+        android:textSize="11sp" />
+
+    <EditText
+        android:id="@+id/etRoomCode"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="14dp"
+        android:background="#12151F"
+        android:gravity="center"
+        android:hint="ABCD"
+        android:textColorHint="#3A3D4A"
+        android:inputType="textCapCharacters"
+        android:maxLength="4"
+        android:letterSpacing="0.3"
+        android:textColor="#E8E9EE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/tvJoinError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="kod bulunamadı ya da oda dolu"
+        android:textColor="#E8635A"
+        android:textSize="11sp"
+        android:visibility="gone" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btnConfirmJoin"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="18dp"
+        app:cardBackgroundColor="#4FC3F7"
+        app:cardCornerRadius="10dp"
+        android:clickable="true"
+        android:focusable="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="katıl"
+            android:textColor="#0D1420"
+            android:textStyle="bold"
+            android:textSize="13sp" />
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

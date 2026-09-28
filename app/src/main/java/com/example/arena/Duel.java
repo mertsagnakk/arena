@@ -30,4 +30,10 @@ public class Duel {
 
     @SerializedName("created_at")
     public String createdAt;
+
+    @SerializedName("room_code")
+    public String roomCode;
+
+    @SerializedName("mode")
+    public String mode; // "random" | "private"
 }

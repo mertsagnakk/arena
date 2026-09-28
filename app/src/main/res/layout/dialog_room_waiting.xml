@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_dialog_rounded"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="oda kuruldu"
+        android:textColor="#C7C9D4"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvRoomCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:letterSpacing="0.3"
+        android:text="7F3K"
+        android:textColor="#4FC3F7"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="bu kodu arkadaşınla paylaş"
+        android:textColor="#7A7D8C"
+        android:textSize="12sp" />
+
+    <ProgressBar
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:indeterminateTint="#4FC3F7" />
+
+    <TextView
+        android:id="@+id/tvWaitingStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="rakip bekleniyor..."
+        android:textColor="#9A9CAB"
+        android:textSize="12sp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btnCancelRoom"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="22dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="9dp"
+        app:strokeColor="#3A3D4A"
+        app:strokeWidth="1dp"
+        android:clickable="true"
+        android:focusable="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="iptal et"
+            android:textColor="#9A9CAB"
+            android:textSize="13sp" />
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
